@@ -1,1 +1,1 @@
-"# Double Pendulum" 
+# Double Pendulum
