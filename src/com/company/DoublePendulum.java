@@ -11,8 +11,9 @@ public class DoublePendulum extends JPanel implements ActionListener {
 
     Timer timer;
     static double g = 1;
+    static int translate_x = 400, translate_y = 300;
 
-    int radius1 = 100;
+    int radius1 = 200;
     int radius2 = 200;
     int mass1 = 20;
     int mass2 = 20;
@@ -43,7 +44,7 @@ public class DoublePendulum extends JPanel implements ActionListener {
         super.paintComponent(g);
 
         g.drawImage(bufferedImage,0,0,null);
-        g.translate(400,400);
+        g.translate(translate_x,translate_y);
         g.setColor(Color.BLACK);
 
         g.fillOval(x_1-mass1/2,y_1-mass1/2,mass1,mass1);
@@ -95,7 +96,7 @@ public class DoublePendulum extends JPanel implements ActionListener {
         //velocity_angle1 *= .999;
         //velocity_angle2 *= .999;
 
-        p1 = new Point(x_2 + 400,y_2 + 400);
+        p1 = new Point(x_2 + translate_x,y_2 + translate_y);
         if(p2!=null)
             line2d = new Line2D.Double(p1,p2);
         p2 = p1;
