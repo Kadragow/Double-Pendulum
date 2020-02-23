@@ -33,7 +33,7 @@ public class DoublePendulum extends JPanel implements ActionListener {
     Point p1;
     Point p2;
     public DoublePendulum(){
-        timer = new Timer(1,this);
+        timer = new Timer(25,this);
         bufferedImage = new BufferedImage(1000,1000,BufferedImage.TYPE_INT_RGB);
         g2d = (Graphics2D) bufferedImage.getGraphics();
         g2d.setColor(getBackground());
